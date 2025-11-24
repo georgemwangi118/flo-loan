@@ -7,10 +7,10 @@ const About: React.FC = () => {
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          About <span className="text-green-600">FloLoan</span>
+          About <span className="text-[#FFD700]">Firefly</span>
         </h1>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-          Your trusted digital lending partner, providing accessible financial
+          Your trusted financial agency, providing accessible financial
           solutions to help you achieve your goals.
         </p>
 
@@ -19,31 +19,26 @@ const About: React.FC = () => {
           {/* Mission */}
           <div className="bg-white rounded-2xl shadow-md p-8 text-left">
             <div className="flex items-center mb-4">
-              <Target className="text-green-600 w-8 h-8 mr-3" />
+              <Target className="text-[#FFD700] w-8 h-8 mr-3" />
               <h2 className="text-xl font-semibold text-gray-900">
                 Our Mission
               </h2>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              To democratize access to credit by providing fast, transparent,
-              and affordable loan services through innovative digital
-              technology, helping individuals and businesses thrive in the
-              modern economy.
+              To ensure our clients have access to fast and affordable financing by making the process seamless and stress-free.
             </p>
           </div>
 
           {/* Vision */}
           <div className="bg-white rounded-2xl shadow-md p-8 text-left">
             <div className="flex items-center mb-4">
-              <Eye className="text-green-600 w-8 h-8 mr-3" />
+              <Eye className="text-[#FFD700] w-8 h-8 mr-3" />
               <h2 className="text-xl font-semibold text-gray-900">
                 Our Vision
               </h2>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              To be the leading digital lending platform in East Africa,
-              recognized for our commitment to financial inclusion, customer
-              satisfaction, and responsible lending practices.
+              To connect you with trusted financial providers who offer fast, simple, and reliable loans, empowering you to take control of your finances - without giving up your independence.
             </p>
           </div>
         </div>
@@ -55,7 +50,7 @@ const About: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-white rounded-2xl shadow-md p-8">
             <div className="flex flex-col items-center text-center">
-              <ShieldCheck className="text-green-600 w-10 h-10 mb-3" />
+              <ShieldCheck className="text-[#FFD700] w-10 h-10 mb-3" />
               <h3 className="text-lg font-semibold text-gray-900">
                 Trust & Security
               </h3>
@@ -68,7 +63,7 @@ const About: React.FC = () => {
 
           <div className="bg-white rounded-2xl shadow-md p-8">
             <div className="flex flex-col items-center text-center">
-              <Timer className="text-green-600 w-10 h-10 mb-3" />
+              <Timer className="text-[#FFD700] w-10 h-10 mb-3" />
               <h3 className="text-lg font-semibold text-gray-900">
                 Speed & Efficiency
               </h3>
@@ -81,7 +76,7 @@ const About: React.FC = () => {
 
           <div className="bg-white rounded-2xl shadow-md p-8">
             <div className="flex flex-col items-center text-center">
-              <Users className="text-green-600 w-10 h-10 mb-3" />
+              <Users className="text-[#FFD700] w-10 h-10 mb-3" />
               <h3 className="text-lg font-semibold text-gray-900">
                 Customer First
               </h3>

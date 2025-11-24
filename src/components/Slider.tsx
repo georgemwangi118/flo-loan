@@ -1,29 +1,38 @@
 import React,{useState, useEffect} from 'react';
 import { ChevronLeft, ChevronRight, MessageCircle } from 'lucide-react';
-import img1 from '../assets/house.jpg';
-import img2 from '../assets/car.jpg';
-import img3 from '../assets/title.jpg';
+import house from '../assets/house2.jpg';
+import cx5 from '../assets/cars/cx-5-1.jpeg';
+import hilux from '../assets/cars/hilux-black.jpg';
+import handshake from '../assets/handshake.jpg';
 import './slider.css';
 
 const slides = [
-    {
-        id: 1,
-        image: img1,
-        title: "Asset Finance Loan",
-        subtitle:"Invest in Your Dreams. Own the asset that will take you further"
-    },
-    {
-        id: 2,
-        image: img2,
-        title: "Logbook Loan",
-        subtitle:"Get Vehicle Logbook Loan of up to Kes 5 million to keep you moving"
-    },
-    {
-        id: 3,
-        image: img3,
-        title: "Title deed Loan",
-        subtitle:"Unlock the Value of Your Property with Our Title Deed Loans"
-    },
+  {
+    id: 0,
+    type: "intro",
+    title: "Welcome to Firefly Loan Agency",
+    subtitle:
+      "We shine a light on smarter, better borrowing. We connect you with financing options tailored to your needs, offering quick, hassle-free loans with transparent terms, flexible repayment plans, and a customer-first approach. With Firefly, your financial goals shine—without slowing you down.",
+    image: handshake,
+  },
+  {
+    id: 1,
+    image: cx5,
+    title: "Asset Finance Loan",
+    subtitle:"Invest in Your Dreams. Own the asset that will take you further"
+  },
+  {
+    id: 2,
+    image: hilux,
+    title: "Logbook Loan",
+    subtitle:"Get Vehicle Logbook Loan of up to Kes 5 million to keep you moving"
+  },
+  {
+    id: 3,
+    image: house,
+    title: "Title deed Loan",
+    subtitle:"Unlock the Value of Your Property with Our Title Deed Loans"
+  },
 ];
 
 const Slider: React.FC = () => {
@@ -49,7 +58,7 @@ const Slider: React.FC = () => {
       {slides.map((slide, index) => (
         <div
             key={slide.id}
-            className={`absolute w-full h-full transition-opacity duration-1000 ease-in-out ${index === current 
+            className={`absolute w-full h-full transition-opacity duration-2000 ease-in-out ${index === current 
                 ? "opacity-100 z-20 zoom-out-bg"
                 : "opacity-0 z-10"
             }`}
@@ -84,13 +93,13 @@ const Slider: React.FC = () => {
       
       {/** Arrows */}
       <button
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 z-30 bg-amber-500 p-2 rounded-full hover:bg-white"
+        className="hidden md:flex absolute top-1/2 left-4 transform -translate-y-1/2 z-30 bg-[#FFD700] p-2 rounded-full hover:bg-white"
         onClick={() => setCurrent((current - 1 + slides.length) % slides.length)}
       >
         <ChevronLeft size={28} />
       </button>
       <button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 z-30 bg-amber-500  p-2 rounded-full hover:bg-white"
+        className="hidden md:flex absolute top-1/2 right-4 transform -translate-y-1/2 z-30 bg-[#FFD700]  p-2 rounded-full hover:bg-white"
         onClick={() => setCurrent((current + 1) % slides.length)}
       >
         <ChevronRight size={28} />
@@ -102,7 +111,7 @@ const Slider: React.FC = () => {
             <button
                 key={index}
                 className={`w-3 h-3 rounded-full ${
-                    index === current ? "bg-amber-500" : "bg-white/50"
+                    index === current ? "bg-[#FFD700]" : "bg-white/50"
                 }`}
                 onClick={() => goToSlide(index)}
             />

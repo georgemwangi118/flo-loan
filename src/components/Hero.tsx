@@ -21,9 +21,9 @@ const Hero: React.FC = () => {
           className="md:w-1/2 mb-10 md:mb-0"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-gray-900">
-            Smart Loan Solutions <br /> for Every Need 💰
+            Smart Loan Solutions <br /> for Every Need 
           </h1>
-          <p className="text-lg  mb-8 text-gray-600">
+          <p className="text-lg  mb-8 text-gray-700">
             Get the right financial help when you need it most — whether it’s a personal, business, or home loan.
             Fast, flexible, and trusted consultancy at your service.
           </p>
@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
           <div className="flex gap-4">
             <button
               onClick={() => document.getElementById("loan-section")?.scrollIntoView({ behavior: "smooth" })}
-              className="bg-gray-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500"
+              className="bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500"
             >
               Explore Loan Options
             </button>

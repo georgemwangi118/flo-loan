@@ -11,7 +11,7 @@ const LoanCard: React.FC<LoanCardProps> = ({ loan }) => {
   return (
     <motion.div 
       whileHover={{ scale: 1.05 }} 
-      className="bg-white rounded-2xl shadow-md overflow-hidden border border-green-200"
+      className="bg-white rounded-2xl shadow-md overflow-hidden border border-[#FFD700]"
     >
       {/** Image with zoom animation */}
       <motion.div
@@ -28,12 +28,12 @@ const LoanCard: React.FC<LoanCardProps> = ({ loan }) => {
       {/** Text section */}
       <div className="p-6 text-center">
         <h2 className="text-xl font-semibold ">{loan.name}</h2>
-        <p className="text-green-600/70 mt-2 text-sm">
+        <p className=" mt-2 text-sm">
           {loan.description.substring(0, 80)}...
         </p>
         <Link
           to={loan.link}
-          className="inline-block mt-4 bg-green-600 hover:bg-green-7000 text-white px-4 py-2 rounded-lg "
+          className="inline-block mt-4 bg-[#FFD700] hover:bg-green-7000 text-black px-4 py-2 rounded-lg "
         >
           Learn More
         </Link>

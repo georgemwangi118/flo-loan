@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         {/** Company Info */}
         <div>
           <h2 className="text-white text-lg font-semibold mb-3">
-            Flo Loans
+            Firefly Agency
           </h2>
           <p className="text-sm text-gray-400">
             Your trusted partner in providing accessible and reliable financial solutions for personal and business needs.
@@ -50,7 +50,6 @@ const Footer: React.FC = () => {
           </h3>
           <p className="text-sm text-gray-400">
             All loans are subject to approval. Terms and conditions apply.
-            Representative APR varies based on loan amount and term.
           </p>
         </div>
       </div>
@@ -61,7 +60,7 @@ const Footer: React.FC = () => {
           <div>
             <p className="mb-1">
               <strong className="text-gray-300">Regulatory Compliance:</strong>{" "}
-              Licensed financial consultancy. All operations comply with
+              Licensed financial agency. All operations comply with
               applicable financial regulations.
             </p>
             <p>
@@ -72,13 +71,8 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <p>
-              <strong className="text-gray-300">Representative Example:</strong>{" "}
-              KES 50,000 over 12 months at 15% APR = Total repayable: KES
-              54,250 (approx. KES 4,521/month).
-            </p>
             <p className="mt-2 text-gray-500">
-              © {new Date().getFullYear()} FLo Loans. All
+              © {new Date().getFullYear()} Firefly. All
               rights reserved. Actual rates and fees may vary.
             </p>
           </div>

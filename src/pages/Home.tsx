@@ -9,8 +9,6 @@ const Home: React.FC = () => {
     <>
       <Slider />
       <div className="bg-gray-50 min-h-screen">
-        <Hero />
-
         <section id="loan-section" className="p-8">
           <h1 className="text-3xl font-bold text-center text-blue-800 mb-8">
             Explore Our Loan Options
@@ -21,6 +19,7 @@ const Home: React.FC = () => {
             ))}
           </div>
         </section>
+        <Hero />
       </div>
     </>
     

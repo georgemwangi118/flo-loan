@@ -1,7 +1,6 @@
-import car from "../assets/car.jpg";
+import hilux from "../assets/cars/hilux-black.jpg";
+import cx5 from '../assets/cars/cx5-red.jpeg'
 import house from "../assets/house.jpg";
-import title from "../assets/title.jpg";
-
 export interface LoanType {
   id: number;
   name: string;
@@ -16,7 +15,7 @@ export const loanTypes: LoanType[] = [
     name: "Asset Finance Loan",
     description:
       "Invest in Your Dreams. Own the asset that will take you further.",
-    image: house,
+    image: cx5,
     link:"asset-finance-loan"
   },
   {
@@ -24,7 +23,7 @@ export const loanTypes: LoanType[] = [
     name: "Logbook Loan",
     description:
       "Get Vehicle Logbook Loan of up to Kes 5 million to keep you moving.",
-    image: car,
+    image: hilux,
     link:"logbook-loan"
   },
   {
@@ -32,7 +31,7 @@ export const loanTypes: LoanType[] = [
     name: "Title deed Loan",
     description:
       "Unlock the Value of Your Property with Our Title Deed Loans.",
-    image: title,
+    image: house,
     link:"title-deed-loan"
   },
  
