@@ -41,7 +41,7 @@ const Slider: React.FC = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrent((prev) => (prev + 1) % slides.length);
-        }, 5000);
+        }, 30000);
         return () => clearInterval(interval);
     }, []);
 
@@ -54,18 +54,18 @@ const Slider: React.FC = () => {
   const goToSlide = (index: number) => setCurrent(index);
 
   return (
-    <div className='font-serif relative w-full h-[700px] overflow-hidden'>
+    <div className='font-serif relative w-full h-[400px] lg:h-[700px] overflow-hidden'>
       {slides.map((slide, index) => (
         <div
             key={slide.id}
-            className={`absolute w-full h-full transition-opacity duration-2000 ease-in-out ${index === current 
+            className={`absolute w-full h-full transition-opacity duration-1000 ease-in-out ${index === current 
                 ? "opacity-100 z-20 zoom-out-bg"
                 : "opacity-0 z-10"
             }`}
             style={{
                 backgroundImage: `url(${slide.image})`,
                 backgroundSize: 'cover',
-                backgroundPosition: 'center',
+                backgroundPosition: window.innerHeight < 640 ? "top center" : "center",
                 backgroundRepeat: 'no-repeat',
             }}
         >

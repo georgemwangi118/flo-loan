@@ -14,32 +14,15 @@ const AssetFinanceLoan: React.FC = () => {
     <section className="bg-[#FAF8F2] min-h-screen px-8 py-20 flex justify-center">
       <div className="max-w-4xl w-full">
         {/* Title */}
-        <h1 className="text-4xl font-bold text-[#0A0A0A] mb-10">Overview</h1>
+        <h1 className="text-4xl font-bold text-[#0A0A0A] mb-10">Asset Finance Loan | Car Financing Loan</h1>
 
         {/* Intro Text */}
         <div className="text-[#1A1A1A] leading-relaxed space-y-4 mb-10">
           <p>
-            We know that big investments can feel daunting. That’s why our Asset Finance loan is here for you. Get the vehicles, machinery, and technology you need to grow—without worrying about your cash flow.
+            Need a new Ride, Get up to 80% financing within 48 hours and flexible repayments of up to 36 months.
           </p>
-          <p>
-            We’re committed to helping you and your business thrive with competitive rates and a simple, straightforward process. You’ll get a quick decision and fast access to funds, so you can stop waiting and start moving forward.
-          </p>
-          <p>
-            We also offer buy-off loans solutions for civil servants with loans
-            with other lending institutions.
-          </p>
+          <p>(We finance vehicles YOM 2009 and above)</p>
         </div>
-
-        {/* WHAT YOU GET */}
-        <h2 className="text-lg font-semibold tracking-wide text-[#0A0A0A] mt-10 mb-4">
-          Key Features:
-        </h2>
-
-        <ul className="space-y-2 text-[#1A1A1A] leading-relaxed ml-5 list-disc">
-          <li>Loan Amount: Up to KES 2,000,000</li>
-          <li>Flexible Repayment: Terms of up to 24 months</li>
-          <li>Quick Access: Fast and straightforward disbursement process</li>
-        </ul>
 
         {/* WHAT TO HAVE WHEN APPLYING */}
         <h2 className="text-lg font-semibold tracking-wide text-[#0A0A0A] mt-10 mb-4">
@@ -53,6 +36,7 @@ const AssetFinanceLoan: React.FC = () => {
           <li>Employment documents - employment contract, pay slips, etc</li>
           <li>Business documents - valid business permit, lease agreements, invoices or receipts, etc</li>
           <li>Copy of ID/passport & KRA Pin</li>
+          <li>Insurance - Comprehensive</li>
         </ul>
 
        

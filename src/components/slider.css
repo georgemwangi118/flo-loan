@@ -8,7 +8,7 @@
 }
 
 .zoom-out-bg {
-  animation: zoomIn 5s ease-in-out forwards;
+  animation: zoomIn 30s linear forwards;
 }
 
 @keyframes slideUp {

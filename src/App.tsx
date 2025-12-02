@@ -10,6 +10,7 @@ import LogbookLoan from "./pages/LogbookLoan";
 import AssetFinanceLoan from "./pages/AssetFinanceLoan";
 import TitleDeedLoan from "./pages/TitleDeedLoan";
 import ScrollToTop from "./ScrollToTop";
+import BuyOffLoan from "./pages/BuyOffLoan";
 
 const App: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const App: React.FC = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/logbook-loan" element={<LogbookLoan />} />
           <Route path="/asset-finance-loan" element={<AssetFinanceLoan />} />
+          <Route path="/buy-off-loan" element={<BuyOffLoan />} />
           <Route path="/title-deed-loan" element={<TitleDeedLoan />} />
         </Routes>
       <Footer />

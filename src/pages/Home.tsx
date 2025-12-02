@@ -13,7 +13,7 @@ const Home: React.FC = () => {
           <h1 className="text-3xl font-bold text-center text-blue-800 mb-8">
             Explore Our Loan Options
           </h1>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {loanTypes.map((loan) => (
               <LoanCard key={loan.id} loan={loan} />
             ))}

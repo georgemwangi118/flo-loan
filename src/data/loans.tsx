@@ -12,27 +12,35 @@ export interface LoanType {
 export const loanTypes: LoanType[] = [
   {
     id: 1,
-    name: "Asset Finance Loan",
-    description:
-      "Invest in Your Dreams. Own the asset that will take you further.",
-    image: cx5,
-    link:"asset-finance-loan"
-  },
-  {
-    id: 2,
     name: "Logbook Loan",
     description:
-      "Get Vehicle Logbook Loan of up to Kes 5 million to keep you moving.",
+      "Logbook Mkononi, Pesa Mfukoni. Unlock up to 70% of your car's value while still driving it in just 6 hours.",
     image: hilux,
     link:"logbook-loan"
   },
   {
+    id: 2,
+    name: "Asset Finance Loan",
+    description:
+      "Need a new ride, Get up to 80% financing within 48 hours and flexible repayments of up to 36 months",
+    image: cx5,
+    link:"asset-finance-loan"
+  },
+  {
     id: 3,
+    name: "Buy off Loan",
+    description:
+      "When it gets tough, we help you move forward, Our Buy off logbook loan product allows you to borrow more and stress less.",
+    image: hilux,
+    link:"buy-off-loan"
+  },
+  {
+    id: 4,
     name: "Title deed Loan",
     description:
       "Unlock the Value of Your Property with Our Title Deed Loans.",
     image: house,
     link:"title-deed-loan"
   },
- 
+
 ];

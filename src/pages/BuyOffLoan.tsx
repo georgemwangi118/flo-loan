@@ -2,11 +2,11 @@ import React from "react";
 import { MessageCircle } from "lucide-react";
 import {motion} from "framer-motion";
 
-const LogbookLoan: React.FC = () => {
+const BuyOffLoan: React.FC = () => {
 
   const handleWhatsAppClick = () => {
     const phone = "254707064524"; // your agency number
-    const message = "Hello, I’d like to know more about Logbook Loan.";
+    const message = "Hello, I’d like to know more about Buy Off Loan.";
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank");
   };
 
@@ -15,7 +15,7 @@ const LogbookLoan: React.FC = () => {
       <div className="max-w-4xl w-full">
 
         {/* Title */}
-        <h1 className="text-4xl font-bold text-[#0A0A0A] mb-10">Logbook Loan</h1>
+        <h1 className="text-4xl font-bold text-[#0A0A0A] mb-10">Buy Off Loan</h1>
 
         {/* Intro Text */}
         <div className="text-[#1A1A1A] leading-relaxed space-y-4 mb-10">
@@ -71,4 +71,4 @@ const LogbookLoan: React.FC = () => {
   );
 };
 
-export default LogbookLoan;
+export default BuyOffLoan;
