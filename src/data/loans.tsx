@@ -1,6 +1,7 @@
 import hilux from "../assets/cars/hilux-black.jpg";
 import cx5 from '../assets/cars/cx5-red.jpeg'
 import house from "../assets/house.jpg";
+import demio from "../assets/cars/demio.jpg"
 export interface LoanType {
   id: number;
   name: string;
@@ -31,7 +32,7 @@ export const loanTypes: LoanType[] = [
     name: "Buy off Loan",
     description:
       "When it gets tough, we help you move forward, Our Buy off logbook loan product allows you to borrow more and stress less.",
-    image: hilux,
+    image: demio,
     link:"buy-off-loan"
   },
   {

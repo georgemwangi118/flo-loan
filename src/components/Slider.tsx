@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight, MessageCircle } from 'lucide-react';
 import house from '../assets/house2.jpg';
 import cx5 from '../assets/cars/cx-5-1.jpeg';
 import hilux from '../assets/cars/hilux-black.jpg';
+import demio from "../assets/cars/demio.jpg"
 import handshake from '../assets/handshake.jpg';
 import './slider.css';
 
@@ -29,6 +30,13 @@ const slides = [
   },
   {
     id: 3,
+    title: "Buy off Loan",
+    subtitle:
+      "When it gets tough, we help you move forward, Our Buy off logbook loan product allows you to borrow more and stress less.",
+    image: demio,
+  },
+  {
+    id: 4,
     image: house,
     title: "Title deed Loan",
     subtitle:"Unlock the Value of Your Property with Our Title Deed Loans"

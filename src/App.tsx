@@ -11,6 +11,8 @@ import AssetFinanceLoan from "./pages/AssetFinanceLoan";
 import TitleDeedLoan from "./pages/TitleDeedLoan";
 import ScrollToTop from "./ScrollToTop";
 import BuyOffLoan from "./pages/BuyOffLoan";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const App: React.FC = () => {
   return (
@@ -26,6 +28,8 @@ const App: React.FC = () => {
           <Route path="/asset-finance-loan" element={<AssetFinanceLoan />} />
           <Route path="/buy-off-loan" element={<BuyOffLoan />} />
           <Route path="/title-deed-loan" element={<TitleDeedLoan />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
       <Footer />
     </Router>

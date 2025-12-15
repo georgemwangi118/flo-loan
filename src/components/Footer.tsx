@@ -1,5 +1,6 @@
 import { FileText, Info, Shield } from "lucide-react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   
@@ -22,15 +23,15 @@ const Footer: React.FC = () => {
           <ul className="space-y-2 text-sm">
             <li className="flex items-center gap-2">
               <FileText size={16} />
-              <a href="#" className="hover:text-white">
+              <Link to="terms-and-conditions" className="hover:text-white">
                 Terms of Service
-              </a>
+              </Link>
             </li>
             <li className="flex items-center gap-2">
               <Shield size={16} />
-              <a href="#" className="hover:text-white">
+              <Link to="/privacy-policy" className="hover:text-white">
                 Privacy Policy
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

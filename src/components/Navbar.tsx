@@ -34,10 +34,10 @@ const Navbar: React.FC = () => {
             <Link to="/contact" className="text-gray-200 hover:text-[#FFD700] transition">
               Contact
             </Link>
-            <Link to="/terms" className="text-gray-200 hover:text-[#FFD700] transition">
+            <Link to="/terms-and-conditions" className="text-gray-200 hover:text-[#FFD700] transition">
               Terms
             </Link>
-            <Link to="/privacy" className="text-gray-200 hover:text-[#FFD700] transition">
+            <Link to="/privacy-policy" className="text-gray-200 hover:text-[#FFD700] transition">
               Privacy
             </Link>
 
@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
             </Link>
 
             <Link
-              to="/#"
+              to="/terms-and-conditions"
               onClick={() => setIsOpen(false)}
               className="block text-gray-200 hover:text-[#FFD700] transition"
             >
@@ -94,7 +94,7 @@ const Navbar: React.FC = () => {
             </Link>
 
             <Link
-              to="/#"
+              to="/privacy-policy"
               onClick={() => setIsOpen(false)}
               className="block text-gray-200 hover:text-[#FFD700] transition"
             >
