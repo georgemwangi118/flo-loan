@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import logo from '../../src/assets/firefly-icon.png'
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +21,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-[#FFD700]">Firefly</span>
+            <img src={logo} alt="Firefly Finance logo" className="h-40 w-auto object-contain" />
           </Link>
 
           {/* Desktop Nav */}
