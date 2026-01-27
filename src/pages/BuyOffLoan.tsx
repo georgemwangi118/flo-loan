@@ -16,8 +16,6 @@ const BuyOffLoan: React.FC = () => {
       duration: "",
       insurance: false
     });
-  
-    const phone = "254707064524";
     
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       const { name, value, type, checked } = e.target;
@@ -28,29 +26,53 @@ const BuyOffLoan: React.FC = () => {
       });
     };
   
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
       e.preventDefault();
-  
-      const message = `
-        *Buy Off Loan Application*
-        Name: ${form.name}
-        Phone: ${form.phone}
-        Location: ${form.location}
-  
-        Vehicle Details
-        . Make: ${form.make}
-        . Model: ${form.model}
-        . Year: ${form.year}
-  
-        Loan Amount: KES ${form.amount}
-        Duration: ${form.duration}
-        Insurance: ${form.insurance ? "Yes" : "No"}
-      `;
-  
-      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank");
-  
-      setOpen(false);
+    
+      try {
+        const res = await fetch('https://www.firefly.co.ke/scripts/buy_off_loan.php', {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            fullName: form.name,
+            phone: form.phone,
+            location: form.location,
+            vehicleMake: form.make,
+            vehicleModel: form.model,
+            vehicleYear: form.year,
+            amount: form.amount,
+            duration: form.duration,
+            insurance: form.insurance
+          })
+        });
+    
+        const data = await res.json();
+    
+        if (data.success) {
+          alert("Application submitted successfully!");
+          setOpen(false);
+          setForm({
+            name: "",
+            phone: "",
+            location: "",
+            make: "",
+            model: "",
+            year: "",
+            amount: "",
+            duration: "",
+            insurance: false,
+          })
+        } else {
+          alert("Failed to submit application");
+        }
+      } catch (err) {
+        alert("Server error. Please try again later")
+        console.log(err)
     }
+    setOpen(false);
+  }
 
   return (
     <section className="bg-[#FAF8F2] min-h-screen px-8 py-20 flex justify-center">

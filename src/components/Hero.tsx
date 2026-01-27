@@ -1,14 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { MessageCircle } from "lucide-react";
 import img from "../assets/hero-loans.jpg";
 
 const Hero: React.FC = () => {
-  const handleWhatsAppClick = () => {
-    const phone = "254707064524"; 
-    const message = "Hello, I’d like to inquire about your loan services.";
-    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank");
-  };
 
   return (
     <section className="bg-linear-to-br from-green-50 via-white to-green-50/30 text-white py-20">
@@ -36,13 +30,7 @@ const Hero: React.FC = () => {
               Explore Loan Options
             </button>
 
-            <button
-              onClick={handleWhatsAppClick}
-              className="flex items-center gap-2 bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-semibold"
-            >
-              <MessageCircle size={20} />
-              Chat on WhatsApp
-            </button>
+            
           </div>
         </motion.div>
 

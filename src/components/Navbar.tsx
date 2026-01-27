@@ -43,10 +43,10 @@ const Navbar: React.FC = () => {
             </Link>
 
             <button
-              onClick={handleWhatsAppClick}
+              onClick={() => document.getElementById("loan-section")?.scrollIntoView({ behavior: "smooth" })}
               className="bg-[#FFD700] text-black px-6 py-2 rounded-lg font-medium hover:bg-[#d0c271] transition"
             >
-              Apply Now
+              Loan Options
             </button>
           </div>
 
