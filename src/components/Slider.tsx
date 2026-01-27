@@ -101,13 +101,13 @@ const Slider: React.FC = () => {
       
       {/** Arrows */}
       <button
-        className="hidden md:flex absolute top-1/2 left-4 transform -translate-y-1/2 z-30 bg-[#FFD700] p-2 rounded-full hover:bg-white"
+        className=" md:flex absolute top-[65%] left-4 transform -translate-y-1/2 z-30 bg-[#FFD700] p-2 rounded-full hover:bg-white"
         onClick={() => setCurrent((current - 1 + slides.length) % slides.length)}
       >
         <ChevronLeft size={28} />
       </button>
       <button
-        className="hidden md:flex absolute top-1/2 right-4 transform -translate-y-1/2 z-30 bg-[#FFD700]  p-2 rounded-full hover:bg-white"
+        className=" md:flex absolute top-[65%] right-4 transform -translate-y-1/2 z-30 bg-[#FFD700]  p-2 rounded-full hover:bg-white"
         onClick={() => setCurrent((current + 1) % slides.length)}
       >
         <ChevronRight size={28} />
