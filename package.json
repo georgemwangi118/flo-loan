@@ -8,6 +8,7 @@
     "dev:api": "php -S 127.0.0.1:8000 -t public",
     "create-admin": "php scripts/create-admin.php",
     "build": "tsc -b && vite build",
+    "package": "npm run build && rm -f firefly-site.zip && cd dist && zip -qr ../firefly-site.zip . -x '.DS_Store' '*/.DS_Store'",
     "lint": "eslint .",
     "preview": "vite preview"
   },
