@@ -1,19 +1,21 @@
 import { FileText, Info, Shield } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
+import { useContent } from "../content/useContent";
 
 const Footer: React.FC = () => {
-  
+  const { footer } = useContent();
+
   return (
     <footer className="bg-gray-900 text-gray-300 py-12 px-6 mt-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-gray-700 pb-8">
         {/** Company Info */}
         <div>
           <h2 className="text-white text-lg font-semibold mb-3">
-            Firefly Agency
+            {footer.companyName}
           </h2>
           <p className="text-sm text-gray-400">
-            Your trusted partner in providing accessible and reliable financial solutions for personal and business needs.
+            {footer.companyText}
           </p>
         </div>
 
@@ -39,18 +41,17 @@ const Footer: React.FC = () => {
         {/** Support Section */}
         <div>
           <h3 className="text-white text-lg font-semibold mb-3">Support</h3>
-          <p className="text-sm text-gray-400">Business Hours: Mon–Fri</p>
-          <p className="text-sm text-gray-400">8:00 AM – 6:00 PM EAT</p>
+          <p className="text-sm text-gray-400 whitespace-pre-line">{footer.supportHours}</p>
         </div>
 
         {/* Important Notice */}
         <div>
           <h3 className="text-white text-lg font-semibold mb-3 flex items-center gap-2">
             <Info size={16} />
-            Important Notice
+            {footer.noticeTitle}
           </h3>
           <p className="text-sm text-gray-400">
-            All loans are subject to approval. Terms and conditions apply.
+            {footer.noticeText}
           </p>
         </div>
       </div>
@@ -61,20 +62,17 @@ const Footer: React.FC = () => {
           <div>
             <p className="mb-1">
               <strong className="text-gray-300">Regulatory Compliance:</strong>{" "}
-              Licensed financial agency. All operations comply with
-              applicable financial regulations.
+              {footer.regulatory}
             </p>
             <p>
-              <strong className="text-gray-300">Credit Reporting:</strong> We
-              report to credit reference bureaus. Responsible borrowing helps
-              build your credit history.
+              <strong className="text-gray-300">Credit Reporting:</strong>{" "}
+              {footer.creditReporting}
             </p>
           </div>
 
           <div>
             <p className="mt-2 text-gray-500">
-              © {new Date().getFullYear()} Firefly. All
-              rights reserved. Actual rates and fees may vary.
+              © {new Date().getFullYear()} {footer.copyright}
             </p>
           </div>
 

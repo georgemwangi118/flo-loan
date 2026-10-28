@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+firefly-data
+public/uploads/*
+!public/uploads/.htaccess
+
+.claude
+ADMIN.md

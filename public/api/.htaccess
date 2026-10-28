@@ -1,0 +1,6 @@
+Options -Indexes
+
+# Shared helper file is only meant to be included, never requested directly.
+<Files "_bootstrap.php">
+  Require all denied
+</Files>

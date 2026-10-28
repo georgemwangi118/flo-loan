@@ -1,49 +1,10 @@
 import React,{useState, useEffect} from 'react';
 import { ChevronLeft, ChevronRight, MessageCircle } from 'lucide-react';
-import house from '../assets/house2.jpg';
-import cx5 from '../assets/cars/cx-5-1.jpeg';
-import hilux from '../assets/cars/hilux-black.jpg';
-import demio from "../assets/cars/demio.jpg"
-import handshake from '../assets/handshake.jpg';
 import './slider.css';
-
-const slides = [
-  {
-    id: 0,
-    type: "intro",
-    title: "Welcome to Firefly Loan Agency",
-    subtitle:
-      "We shine a light on smarter, better borrowing. We connect you with financing options tailored to your needs, offering quick, hassle-free loans with transparent terms, flexible repayment plans, and a customer-first approach. With Firefly, your financial goals shine—without slowing you down.",
-    image: handshake,
-  },
-  {
-    id: 1,
-    image: cx5,
-    title: "Asset Finance Loan",
-    subtitle:"Invest in Your Dreams. Own the asset that will take you further"
-  },
-  {
-    id: 2,
-    image: hilux,
-    title: "Logbook Loan",
-    subtitle:"Get Vehicle Logbook Loan of up to Kes 5 million to keep you moving"
-  },
-  {
-    id: 3,
-    title: "Buy off Loan",
-    subtitle:
-      "When it gets tough, we help you move forward, Our Buy off logbook loan product allows you to borrow more and stress less.",
-    image: demio,
-  },
-  {
-    id: 4,
-    image: house,
-    title: "Title deed Loan",
-    subtitle:"Unlock the Value of Your Property with Our Title Deed Loans"
-  },
-];
+import { useContent, whatsappUrl } from '../content/useContent';
 
 const Slider: React.FC = () => {
+    const { slides, general } = useContent();
     const [current, setCurrent] = useState(0);
 
     useEffect(() => {
@@ -51,15 +12,15 @@ const Slider: React.FC = () => {
             setCurrent((prev) => (prev + 1) % slides.length);
         }, 30000);
         return () => clearInterval(interval);
-    }, []);
+    }, [slides.length]);
 
   const handleWhatsAppClick = () => {
-    const phone = "254707064524"; 
-    const message = "Hello, I’d like to inquire about your loan services.";
-    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank");
+    window.open(whatsappUrl(general.whatsappNumber, general.whatsappMessage), "_blank");
   };
 
   const goToSlide = (index: number) => setCurrent(index);
+
+  if (!slides.length) return null;
 
   return (
     <div className='font-serif relative w-full h-[400px] lg:h-[700px] overflow-hidden'>
@@ -71,7 +32,7 @@ const Slider: React.FC = () => {
                 : "opacity-0 z-10"
             }`}
             style={{
-                backgroundImage: `url(${slide.image})`,
+                backgroundImage: `url("${slide.image}")`,
                 backgroundSize: 'cover',
                 backgroundPosition: window.innerHeight < 640 ? "top center" : "center",
                 backgroundRepeat: 'no-repeat',

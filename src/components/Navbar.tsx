@@ -2,17 +2,14 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from '../../src/assets/firefly-icon.png'
+import { useContent, whatsappUrl } from "../content/useContent";
 
 const Navbar: React.FC = () => {
+  const { general } = useContent();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleWhatsAppClick = () => {
-    const phone = "254707064524";
-    const message = "Hello, I’d like to inquire about your loan services.";
-    window.open(
-      `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
-      "_blank"
-    );
+    window.open(whatsappUrl(general.whatsappNumber, general.whatsappMessage), "_blank");
   };
 
   return (
